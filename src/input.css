@@ -1,3 +1,7 @@
+@import "tailwindcss";
+@theme {
+  --color-clifford: #da373d;
+}
 body {
   font:
     14px "Lucida Grande",

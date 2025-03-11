@@ -1,12 +1,17 @@
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const logger = require("morgan");
+const indexRouter = require("./routes/index");
+const compression = require("compression");
 
-var indexRouter = require("./routes/index");
+const app = express();
 
-var app = express();
+app.use(
+  compression({
+    level: 8,
+  }),
+);
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

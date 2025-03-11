@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="nord">
   <%- include('./partials/head.ejs') %>
   <body>
-    <main class="text-center fs-5">
+    <main class="text-center fs-5 min-h-screen">
       <section>
-        <h1><%= title %></h1>
-        <p>Welcome to <%= title %></p>
+        <h1
+          class="text-center text-primary bg-base-200 text-4xl md:text-5xl lg:text-7xl pt-10 pb-6 z-50"
+        >
+          VegardHaglund.dev
+        </h1>
       </section>
-      <section class="mt-5">
-        <p>
-          Go to /tasks endpoint <a href="/tasks">here</a> to manage users task
-        </p>
-        <h1 class="text-9xl font-bold underline text-clifford">Hello world!</h1>
-      </section>
+
+      <section><%- include('./partials/hero.ejs') %></section>
     </main>
+    <%- include('./partials/footer.ejs') %>
   </body>
-  <script src="/js/bootstrap.bundle.min.js"></script>
 </html>
